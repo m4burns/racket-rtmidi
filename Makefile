@@ -1,5 +1,5 @@
 .PHONY: clean linux windows macosx
-CXXFLAGS += -I./rtmidi-2.1.0 -fPIC -D__RTMIDI_DEBUG__ -g
+CXXFLAGS += -I./rtmidi-2.1.0 -fPIC -D__RTMIDI_DEBUG__ -O2 -g -Wall -Wextra -std=c++98
 
 linux: CXXFLAGS += -D__LINUX_ALSA__
 linux: LDFLAGS += -lasound -lpthread
